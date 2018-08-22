@@ -13,8 +13,6 @@ $(document).ready(function() {
 		var init = function(){
 			
 			_setUpListeners();
-
-
 		}
 
 		//метод прослушки событий
