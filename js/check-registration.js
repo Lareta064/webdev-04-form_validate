@@ -1,6 +1,4 @@
-$(document).ready(function() {
-
-	
+$(document).ready(function() {	
 
 	var regFormCheck = (function(){
 
@@ -15,14 +13,11 @@ $(document).ready(function() {
 		var _setUpListeners = function(){
 
 			form.on('submit', function(e){
-				 _formValidate(e);
-				 
+				 _formValidate(e);				 
 			})
-
 		};
 
 		//privat methods
-
 		var _formValidate = function(e){
 
 			var isValid = true;
@@ -77,20 +72,16 @@ $(document).ready(function() {
 				input.on('focus', function(){
 					formGroup.find('.form__tooltip').remove();					
 				});
-
 				
 			});//close  $.each
 		
 		};// close var  _formValidate
-
 		
 		return {
 			init
-		}
-	
+		}	
 
 	}());
 
 		regFormCheck.init();
-
 });
