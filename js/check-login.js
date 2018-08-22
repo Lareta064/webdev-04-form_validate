@@ -8,8 +8,8 @@ $(document).ready(function() {
 		
 		var inputs = _loginForm.find('input[data-type]');
 		var textLoginInvalid = _loginForm.find('#invalid-login');
-		var busyEmail = 'mail@mail.com';
- 		var busyPass = '123';
+		var testEmail = 'mail@mail.com';
+ 		var testPass = '123';
 		var arrayInfo = ['email', 'pass'];
 
 		console.log(arrayInfo);
@@ -79,7 +79,7 @@ $(document).ready(function() {
 				});
 			});// close $.each
 
-				if(arrayInfo[0] === busyEmail && arrayInfo[1] !== busyPass ){
+				if(arrayInfo[0] === testEmail && arrayInfo[1] !== testPass ){
 
 					textLoginInvalid.show(500);
 
