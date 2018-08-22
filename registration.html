@@ -6,6 +6,7 @@
 	<title>Вход на сайт</title>
 	<link rel="stylesheet" href="libs/normalize-css/normalize.css" />
 	<link rel="stylesheet" href="libs/bootstrap-4-grid/grid.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
 	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -30,10 +31,10 @@
 				<div class="login-form__background">
 					<div class="login-form pt-30 pb-30">
 						<h1 class="text-center login-heading mt-0 pt-0">Регистрация</h1>
-						<form>
-							<div class="notify notify--error mb-20">Введите email</div>
-							<div class="notify notify--error mb-20">Неверный формат email</div>
-							<div class="notify notify--error mb-20">Введите пароль</div>
+						<form id="registration-form" action ="success.html" novalidate>
+							<!-- <div class="notify notify--error mb-20 block-hide">Введите email</div>
+							<div class="notify notify--error mb-20 block-hide">Неверный формат email</div>
+							<div class="notify notify--error mb-20 block-hide">Введите пароль</div>
 							<div class="notify no-paddings">
 								<div class="notify no-radius-bottom notify--error">Данный email уже занят</div>
 								<div class="notify no-radius-top">
@@ -41,11 +42,15 @@
 									<p> Или воспользуйтесь
 										<a href="#!">восстановлением пароля </a>, чтобы войти на сайт.</p>
 								</div>
+							</div> -->
+							<div class="form__group">
+								<input class="input-form-registration" name="email" type="Email" placeholder="Email" data-type="required" data-empty="Введите email " data-format="Неверный формат email" data-email-busy="Данный email уже занят"/>
 							</div>
-							<input class="input-form-registration" name="email" type="email" placeholder="Email" />
-							<input class="input-form-registration" name="password" type="password" placeholder="Пароль" />
+							<div class="form__group">
+								<input class="input-form-registration" name="password" type="password" placeholder="Пароль" data-type="required" data-empty="Введите пароль"/>
+							</div>
 							<div class="text-center pt-30">
-								<a class="button button--enter" href="#">Регистрация</a>
+								<input type="submit" class="button button--enter" value="Регистрация" />
 							</div>
 						</form>
 					</div>
